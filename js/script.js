@@ -5,7 +5,13 @@ function grid(num) {
         let squares = document.createElement('div');
         container.appendChild(squares);
         squares.style.cssText = 'border: 1px solid black; height: 50px; width: 50px';
+        squares.addEventListener('mouseover', () => {
+            squares.style.cssText = 'background-color: black; border 1px solid black; height: 50px; width: 50px';
+        })
     }
 }
+
+
+
 
 grid(256);

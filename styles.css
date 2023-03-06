@@ -5,5 +5,10 @@
 #container {
     display: grid;
     grid-template-columns: repeat(16, 50px [col-start]);
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
 }
 
