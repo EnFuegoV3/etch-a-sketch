@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
 const clear = document.querySelector('#clear');
+let gridSize = document.querySelector('#selection');
 
 
 function grid(num) {
@@ -13,8 +14,12 @@ function grid(num) {
         clear.addEventListener('click', () => {
             squares.style.cssText = 'border: 1px solid black; height: 50px; width: 50px';
         })
+        gridSize.addEventListener('click', () => {
+            grid(gridSize.value);
+        })
     }
 }
+
 
 
 grid(256);
