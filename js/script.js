@@ -17,15 +17,17 @@ function grid(num) {
             squares.style.backgroundColor = 'white';
         })
     }
+    gridSize.addEventListener('change', () => {
+        let r = document.getElementById("container")
+        r.remove();
+    })
 }
 
-function selection() {
-        e = document.getElementById('selection').value;
-        gridSize.addEventListener('click', () => {
-            game(e);
+// function selection() {
 
-        });
+//         e = document.getElementById('selection').value;
+//         grid(e);
         
-}
+// }
 
-
+grid(16);
