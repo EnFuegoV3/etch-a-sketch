@@ -14,13 +14,14 @@ function grid(num) {
         clear.addEventListener('click', () => {
             squares.style.cssText = 'border: 1px solid black; height: 50px; width: 50px';
         })
-        gridSize.addEventListener('click', () => {
-            grid(gridSize.value);
-        })
     }
 }
 
+function selection() {
+        let e = document.getElementById('selection').value;
+        return e;
+}
 
 
-grid(256);
+grid(selection());
 
