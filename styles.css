@@ -2,10 +2,16 @@
     box-sizing: border-box;
 }
 
+body {
+   
+}
+
 #container {
     display: grid;
-    grid-template-columns: repeat(16, 50px [col-start]);
-    justify-content: center;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    border: 2px solid goldenrod;
 }
 
 h1 {

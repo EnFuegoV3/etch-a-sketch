@@ -1,27 +1,34 @@
-const container = document.querySelector('#container');
+
 const clear = document.querySelector('#clear');
 let gridSize = document.querySelector('#selection');
 
 
 function grid(num) {
-    for(let n = 0; n < num; n++) {
+    const container = document.querySelector('#container');
+    container.style.gridTemplateRows = `repeat(${num}, auto)`;
+    container.style.gridTemplateColumns = `repeat(${num}, auto)`;
+    for(let n = 0; n < (num * num); n++) {
         let squares = document.createElement('div');
         container.appendChild(squares);
-        squares.style.cssText = 'border: 1px solid black; height: 50px; width: 50px';
         squares.addEventListener('mouseover', () => {
-            squares.style.cssText = 'background-color: black; border 1px solid black; height: 50px; width: 50px';
+            squares.style.cssText = 'background-color: black';
         })
         clear.addEventListener('click', () => {
-            squares.style.cssText = 'border: 1px solid black; height: 50px; width: 50px';
+            return 
         })
+        // if(num == 1024) {
+        //     container.style.cssText = 'display: grid; grid-template-columns: repeat(32, 10px [col-start]); justify-content: center';
+        // }
+        
     }
 }
 
-function selection() {
-        let e = document.getElementById('selection').value;
-        return e;
-}
+// function selection() {
+//         let e = document.getElementById('selection').value;
+//         return e;
+        
+// }
 
 
-grid(selection());
+grid(16);
 
