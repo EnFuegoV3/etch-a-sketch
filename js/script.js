@@ -11,24 +11,21 @@ function grid(num) {
         let squares = document.createElement('div');
         container.appendChild(squares);
         squares.addEventListener('mouseover', () => {
-            squares.style.cssText = 'background-color: black';
+            squares.style.backgroundColor = 'black';
         })
         clear.addEventListener('click', () => {
-            return 
+            squares.style.backgroundColor = 'white';
         })
-        // if(num == 1024) {
-        //     container.style.cssText = 'display: grid; grid-template-columns: repeat(32, 10px [col-start]); justify-content: center';
-        // }
-        
     }
 }
 
-// function selection() {
-//         let e = document.getElementById('selection').value;
-//         return e;
+function selection() {
+        e = document.getElementById('selection').value;
+        gridSize.addEventListener('click', () => {
+            game(e);
+
+        });
         
-// }
+}
 
-
-grid(16);
 

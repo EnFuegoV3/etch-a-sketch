@@ -13,10 +13,10 @@
     <nav>
         <button id="clear">Clear</button>
         <p>Select grid size:
-            <select id="selection" onchange="grid(selection())">
-                <option value="256">16 x 16</option>
-                <option value="1024">32 x 32</option>
-                <option value="4096">64 x 64</option>
+            <select id="selection" oninput="grid(this.value)">
+                <option value="16">16 x 16</option>
+                <option value="32">32 x 32</option>
+                <option value="64">64 x 64</option>
             </select>
         </p>
     </nav>
