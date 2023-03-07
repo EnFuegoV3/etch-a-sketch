@@ -18,8 +18,10 @@ function grid(num) {
         })
     }
     gridSize.addEventListener('change', () => {
-        let r = document.getElementById("container")
+        let r = document.getElementById("container");
         r.remove();
+        num = document.getElementById('selection').value;
+        
     })
 }
 
@@ -30,4 +32,4 @@ function grid(num) {
         
 // }
 
-grid(16);
+grid(num);
