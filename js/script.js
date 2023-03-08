@@ -1,6 +1,7 @@
 
 const clear = document.querySelector('#clear');
-let gridSize = document.querySelector('#selection');
+let gridSize = document.querySelector('#size');
+const container = document.querySelector('#container');
 
 
 function grid(num) {
@@ -16,14 +17,21 @@ function grid(num) {
         clear.addEventListener('click', () => {
             squares.style.backgroundColor = 'white';
         })
+        gridSize.addEventListener('click', () => {
+            container.removeChild(squares);
+        })
     }
-    gridSize.addEventListener('change', () => {
-        let r = document.getElementById("container");
-        r.remove();
-        num = document.getElementById('selection').value;
-        
-    })
+    
 }
+
+gridSize.addEventListener('click', () => {
+    let amount = prompt("Enter new row/column amount");
+    if(amount <= 100 && amount > 0){
+        grid(amount);
+    } else {alert("Enter a valid number less than or equal to 100")}
+})
+
+grid(16);
 
 // function selection() {
 
@@ -32,4 +40,4 @@ function grid(num) {
         
 // }
 
-grid(num);
+
