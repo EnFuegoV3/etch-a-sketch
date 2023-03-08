@@ -24,11 +24,24 @@ function grid(num) {
     
 }
 
-gridSize.addEventListener('click', () => {
+// gridSize.addEventListener('click', function() {
+//     let amount = prompt("Enter new row/column amount");
+//     if(amount < 1 || amount > 100){
+//         alert("Enter a valid number less than or equal to 100");
+//         return amount;
+//     }   else if(amount <= 100 && amount > 0){
+//         grid(amount);
+//     }
+// })
+
+gridSize.addEventListener('click', function() {
     let amount = prompt("Enter new row/column amount");
-    if(amount <= 100 && amount > 0){
+    while (amount < 1 || amount > 100) {
+        alert("Enter a valid number less than or equal to 100");
+        amount = prompt("Enter new row/column amount");
+    } if (amount => 1 && amount <= 100) {
         grid(amount);
-    } else {alert("Enter a valid number less than or equal to 100")}
+    }
 })
 
 grid(16);
